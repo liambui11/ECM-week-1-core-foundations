@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resilient API Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="dashboard">
+        <header>
+            <h1>Global Data Monitor</h1>
+            <button id="refresh-btn">Fetch Latest Data</button>
+        </header>
+
+        <section class="grid">
+            <div class="card" id="user-card">
+                <h3>User Information</h3>
+                <div class="content"></div>
+                <div class="skeleton"></div>
+            </div>
+
+            <div class="card" id="weather-card">
+                <h3>Weather in HCMC</h3>
+                <div class="content"></div>
+                <div class="skeleton"></div>
+            </div>
+
+            <div class="card" id="activity-card">
+                <h3>Suggestion</h3>
+                <div class="content"></div>
+                <div class="skeleton"></div>
+            </div>
+        </section>
+    </main>
+    <script src="app.js"></script>
+</body>
+</html>

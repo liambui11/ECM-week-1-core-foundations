@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Layout Mastery - Practice</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Responsive Card Grid</h1>
+    </header>
+
+    <main>
+        <div class="container">
+            <!-- Card 1 -->
+            <article class="card">
+                <img src="https://via.placeholder.com/400x250" alt="Sample Image">
+                <div class="card-content">
+                    <h2 class="card-title">Very Long Title That Needs Ellipsis to Work Properly</h2>
+                    <p class="card-desc">
+                        This is a very long description. We use CSS to make sure that if the text is too long, 
+                        it will be cut off with an ellipsis after exactly three lines. This keeps our cards 
+                        uniform in height and looking professional across all screen sizes.
+                    </p>
+                    <button class="card-btn">View Details</button>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card">
+                <img src="https://via.placeholder.com/400x250" alt="Sample Image">
+                <div class="card-content">
+                    <h2 class="card-title">Card Number Two</h2>
+                    <p class="card-desc">A shorter description to see how the grid aligns different content lengths.</p>
+                    <button class="card-btn">View Details</button>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card">
+                <img src="https://via.placeholder.com/400x250" alt="Sample Image">
+                <div class="card-content">
+                    <h2 class="card-title">Card Number Three</h2>
+                    <p class="card-desc">Understanding the Box Model and Flexbox is key to modern web layouts.</p>
+                    <button class="card-btn">View Details</button>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 CSS Mastery Lab</p>
+    </footer>
+</body>
+</html>

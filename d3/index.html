@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Advanced JS Calculator</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="app-container">
+      <main class="calculator">
+        <div class="display-container">
+          <div class="operation-screen" id="operation-screen"></div>
+          <div class="main-screen" id="main-screen">0</div>
+        </div>
+        <section class="buttons">
+          <button class="btn clear">C</button>
+          <button class="btn operator">÷</button>
+          <button class="btn">7</button><button class="btn">8</button
+          ><button class="btn">9</button>
+          <button class="btn operator">×</button>
+          <button class="btn">4</button><button class="btn">5</button
+          ><button class="btn">6</button>
+          <button class="btn operator">-</button>
+          <button class="btn">1</button><button class="btn">2</button
+          ><button class="btn">3</button>
+          <button class="btn operator">+</button>
+          <button class="btn zero">0</button>
+          <button class="btn">.</button>
+          <button class="btn equals">=</button>
+        </section>
+      </main>
+
+      <aside class="history-panel">
+        <h2>Calculation History</h2>
+        <ul id="history-list"></ul>
+      </aside>
+    </div>
+    <script type="module" src="ui.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+/* ================ CSS WAR ================== */
+
+.card p {             
+  color: blue;
+}
+
+#sidebar .card p.text { 
+  color: gray;
+}
+
+.highlight {           
+  color: red;          
+}
+
+
+
+#sidebar .card p.text.highlight {
+  color: red;
+}
+
+:is(.card, .widget) p {
+  color: blue;
+}
+
+@layer base {
+  #sidebar .card p.text { color: gray; }
+}
+@layer theme {  
+  .highlight { color: red; }
+}
