@@ -63,18 +63,31 @@ const checkFormValidity = () => {
   submitBtn.disabled = !isAllValid;
 };
 
+
+const uppercaseRegex = /[A-Z]/;
+const digitRegex = /[0-9]/;
+const specialCharRegex = /[^A-Za-z0-9]/;
+
 fields.password.el.addEventListener("input", () => {
   const val = fields.password.el.value;
   const bar = document.getElementById("strength-bar");
   let strength = 0;
+
   if (val.length >= 8) strength += 25;
-  if (/[A-Z]/.test(val)) strength += 25;
-  if (/[0-9]/.test(val)) strength += 25;
-  if (/[^A-Za-z0-9]/.test(val)) strength += 25;
+  if (uppercaseRegex.test(val)) strength += 25;
+  if (digitRegex.test(val)) strength += 25;
+  if (specialCharRegex.test(val)) strength += 25;
 
   bar.style.width = strength + "%";
-  bar.style.backgroundColor =
-    strength <= 50 ? "#ef4444" : strength <= 75 ? "#f39c12" : "#22c55e";
+
+  if (strength <= 50) {
+    bar.style.backgroundColor = "#ef4444";
+  } else if (strength <= 75) {
+    bar.style.backgroundColor = "#f39c12"; 
+  } else {
+    bar.style.backgroundColor = "#22c55e"; 
+  }
+
   validateField("password");
   if (fields.confirm.el.value) validateField("confirm");
 });
