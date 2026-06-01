@@ -81,7 +81,7 @@ fields.password.el.addEventListener("input", () => {
 
 Object.keys(fields).forEach((id) => {
   const input = fields[id].el;
-  if (id !== "password") {
+  if (input.type !== "password") {
     input.addEventListener("input", () => validateField(id));
   }
   input.addEventListener("blur", () => validateField(id));
